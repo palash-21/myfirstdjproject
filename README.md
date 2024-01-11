@@ -5,7 +5,7 @@ Django - ToDoList
 # If faced even while creating superuser like: 
     $ python manage.py createsuperuser
     Superuser creation skipped due to not running in a TTY. You can run manage.py createsuperuser in your project to create one manually.
-then use winpty
+    then use winpty
     winpty python manage.py createsuperuser
     username: admin
     email: admin@gmail.com
@@ -21,3 +21,8 @@ then use winpty
     (or ls = ToDoList.objects.get(name='myToDoList')
     ls.item_set.create(name="do something")
     ls.save()
+
+
+# To add form in html, we just need to add the form element with method & action and the submit button in html
+    and use a {{form}} object for all the fields 
+    # note : need to always use {% csrf_token %} inside the form element in django
