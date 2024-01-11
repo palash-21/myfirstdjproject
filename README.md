@@ -2,7 +2,7 @@
 
 Django - ToDoList
 
-# If faced even while creating superuser like: 
+# If faced error while creating superuser like: 
     $ python manage.py createsuperuser
     Superuser creation skipped due to not running in a TTY. You can run manage.py createsuperuser in your project to create one manually.
     then use winpty
@@ -23,6 +23,9 @@ Django - ToDoList
     ls.save()
 
 
-# To add form in html, we just need to add the form element with method & action and the submit button in html
+# Forms in django 
+    To add form in html, we just need to 
+    add the form element with method & action,
+    the submit button
     and use a {{form}} object for all the fields 
     # note : need to always use {% csrf_token %} inside the form element in django
