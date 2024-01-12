@@ -23,10 +23,10 @@ Django - ToDoList
     ls.save()
 
 # ToDoList - user-wise access
-![Model](https://github.com/palash-21/myfirstdjproject/blob/main/ToDoList.png)
+![Model](https://github.com/palash-21/myfirstdjproject/blob/main/snaps/ToDoList.png)
 
 # Admin Dashboard
-![Model](https://github.com/palash-21/myfirstdjproject/blob/main/Admin.png)
+![Model](https://github.com/palash-21/myfirstdjproject/blob/main/snaps/Admin.png)
 
 
 # Forms in django 
@@ -37,7 +37,7 @@ Django - ToDoList
     # note : need to always use {% csrf_token %} inside the form element in django
 
 # User Registration
-![Model](https://github.com/palash-21/myfirstdjproject/blob/main/Register.png)
+![Model](https://github.com/palash-21/myfirstdjproject/blob/main/snaps/Register.png)
 
 # Login Page 
-![Model](https://github.com/palash-21/myfirstdjproject/blob/main/login.png)
+![Model](https://github.com/palash-21/myfirstdjproject/blob/main/snaps/login.png)
