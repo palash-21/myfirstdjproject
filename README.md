@@ -22,7 +22,7 @@ Django - ToDoList
     ls.item_set.create(name="do something")
     ls.save()
 
-# ToDoList
+# ToDoList - user-wise access
 ![Model](https://github.com/palash-21/myfirstdjproject/blob/main/ToDoList.png)
 
 # Admin Dashboard
@@ -36,6 +36,8 @@ Django - ToDoList
     and use a {{form}} object for all the fields 
     # note : need to always use {% csrf_token %} inside the form element in django
 
-# User Registration ,login, user-wise todolist
+# User Registration
 ![Model](https://github.com/palash-21/myfirstdjproject/blob/main/Register.png)
+
+# Login Page 
 ![Model](https://github.com/palash-21/myfirstdjproject/blob/main/login.png)
