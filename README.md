@@ -22,6 +22,8 @@ Django - ToDoList
     ls.item_set.create(name="do something")
     ls.save()
 
+# ToDoList
+![Model](https://github.com/palash-21/myfirstdjproject/blob/main/ToDoList.png)
 
 # Forms in django 
     To add form in html, we just need to 
