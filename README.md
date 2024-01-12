@@ -25,6 +25,10 @@ Django - ToDoList
 # ToDoList
 ![Model](https://github.com/palash-21/myfirstdjproject/blob/main/ToDoList.png)
 
+# Admin Dashboard
+![Model](https://github.com/palash-21/myfirstdjproject/blob/main/Admin.png)
+
+
 # Forms in django 
     To add form in html, we just need to 
     add the form element with method & action,
@@ -33,3 +37,5 @@ Django - ToDoList
     # note : need to always use {% csrf_token %} inside the form element in django
 
 # User Registration ,login, user-wise todolist
+![Model](https://github.com/palash-21/myfirstdjproject/blob/main/Register.png)
+![Model](https://github.com/palash-21/myfirstdjproject/blob/main/login.png)
