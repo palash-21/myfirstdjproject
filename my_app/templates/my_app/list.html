@@ -1,24 +1,54 @@
 {% extends "my_app/base.html" %}
 {% block contents %}
+    <h2 style="color:indigo;">Manage To-Do Lists</h2>
+    <hr class="mt-0 mb-4">
     <div class="row-mt-2">
-      <ul>
-        {% for list in lists%}
-            <li>
+        <form method="post" action="#" class="form-group">
+            {% csrf_token %}
+            {% for list in lists%}
                 <h3>{{list}}</h3>
-                <ul>
-                    <h4>List Items</h4>
-                    {% for list in lists%}
-                        {% for item in list.item_set.all%}
+                <h4>Items:</h4>
+                    {% for item in list.item_set.all%}
+                        <div class="input-group">
+                            <div class="input-group-text" style="background-color: unset;display: block;border: unset;">
                             {% if item.completed == True %}
-                                <li style="color:green">{{item}}  --done</li>
+                                <input class="element" type="checkbox" name="c{{item.id}}" id="c{{item.id}}"checked>
+                                <input  type="text" id="i{{item.id}}" value="{{item}}" style="color:green;background-color: unset;border: unset;">
+    <!--                                <div class="element" style="color:green">{{item}}</div>-->
                             {% else %}
-                                <li style="color:orange">{{item}}  --pending</li>
+                                <input class="element" type="checkbox" name="c{{item.id}}" id="c{{item.id}}">
+                                <input  type="text" id="i{{item.id}}" value="{{item}}" style="color:orange;background-color: unset;border: unset;">
+    <!--                                <div class="element" style="color:orange">{{item}}</div>-->
                             {% endif %}
-                        {% endfor %}
+                            </div>
+                        </div>
                     {% endfor %}
-                </ul>
-            </li>
-        {% endfor %}
-      </ul>
+                <div class="input-group">
+                    <button type="submit" name="add" value="add" class="btn btn-success">AddItem</button>
+                    <input type="text" name="new{{list.id}}">
+                </div>
+            <hr>
+            {% endfor %}
+            <div class="input-group">
+                <button type="submit" name="save" value="save" class="btn btn-success">Save</button>
+            </div>
+        </form>
     </div>
 {% endblock %}
+{% block scripts %}
+<script>
+    $(".element").change(function(){
+        let element_id = this.id;
+        let input_div_id = element_id.replace("c","i");
+        let input_div = document.getElementById(input_div_id);
+        if (this.checked){
+            input_div.style.color = "green";
+            // input_div.css({"color":"green"});
+        } else {
+            input_div.style.color = "orange";
+            // input_div.css({"color":"orange"});
+        }
+    });
+</script>
+{% endblock %}
+

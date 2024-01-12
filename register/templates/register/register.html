@@ -1,0 +1,13 @@
+{% extends "my_app/base.html" %}
+{% load crispy_forms_tags %}
+{% block contents %}
+  <h2 style="color:indigo;">Register</h2>
+    <hr class="mt-0 mb-4">
+    <div class="row-mt-2">
+        <form method="post" action="#" class="form-group">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-success">Register</button>
+            {{ form|crispy }}
+        </form>
+    </div>
+{% endblock %}

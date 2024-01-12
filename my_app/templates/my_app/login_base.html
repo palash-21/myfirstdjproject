@@ -44,17 +44,10 @@
         <div class="main">
             <div class="row justify-content-center">
                 <div class="col-8">
-                    {% if user.is_authenticated %}
-                        {% block contents %}
-                            <h2 style="color:indigo;">Home Page</h2>
-                            <hr class="mt-0 mb-4">
-                        {% endblock %}
-                    {% else %}
-                        <br><br>
-                        You are not logged in
-                        <br>
-                        <p>Login <a href="/login">here</a></p>
-                    {% endif %}
+                    {% block contents %}
+                        <h2 style="color:indigo;">Home Page</h2>
+                        <hr class="mt-0 mb-4">
+                    {% endblock %}
                 </div>
             </div>
         </div>

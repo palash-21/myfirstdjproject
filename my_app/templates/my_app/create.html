@@ -1,0 +1,14 @@
+{% extends "my_app/base.html" %}
+{% block contents %}
+    <h2 style="color:indigo;">Create new To-Do List</h2>
+    <hr class="mt-0 mb-4">
+    <div class="row-mt-2">
+        <form method="post" action="#" class="form-group">
+            {% csrf_token %}
+            <div class="input-group">
+                <button type="submit" value="add" class="btn btn-success">Create New</button>
+            {{form.name}}
+            </div>
+        </form>
+    </div>
+{% endblock %}

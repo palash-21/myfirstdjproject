@@ -29,3 +29,5 @@ Django - ToDoList
     the submit button
     and use a {{form}} object for all the fields 
     # note : need to always use {% csrf_token %} inside the form element in django
+
+# User Registration ,login, user-wise todolist
